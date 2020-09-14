@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ITC Precourse</title>
+    <title>Contact</title>
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
@@ -23,31 +23,36 @@
     
     <section>
       <div class="page-wrapper">
-        <div class="card">
-          <img
-            id="profile-image-hover"
-            
-            src="img/Family.png"
-            alt="Boy Reading"
-            class="profile-image"
-          />
-          <!--src="img/boy_exciting_read_literature_books_book_pages_book_pages_know-347136.png"-->
-          <img
-            id="profile-image"
-            src="img/code.png"
-            alt="Profile Julian Lange"
-            class="profile-image"
-          />
-          <div>
-            <h1 class="title" id="my-name">Julian Lange</h1>
-            <p class="subtitle">ITC Fullstack Development</p>
+        <h1>Contact Form</h1>
+        <p>Please complete the form to get in touch!</p>
+          <form method="POST" action="" onsubmit="return confSubmit(this.form)">
+            <fieldset>
+              <legend><b>Your contact information</b></legend>
+              <label for="firstname">Your first name<span style="color: red">*</span></label>
+              <input type="text" id="firstname" name="firstname" class="submitFoo" autofocus required oninput="checkForm()">
+              <label for="lastname">Your last name </label>
+              <input type="text" id="lastname" name="lastname" autofocus>
 
-          </div>
-        </div>
+              <label for="email">Email<span style="color: red">*</span></label>
+              <input type="email" id="email" name="email" placeholder="E.g. julian@fullstack.com" value="" class="submitFoo" required oninput="checkForm()">
+
+            </fieldset>
+            <fieldset>
+              <legend><b>Message</b></legend>
+              <label for="comments">Special requests<span style="color: red">*</span></label>
+              <textarea id="comments" name="comments" class="submitFoo" required oninput="checkForm()"></textarea>
+              <label for="file" class="file">Upload a file</label>
+              <input type="file" id="file" name="file">
+
+              <label class="subscribe">
+                <input id="subscribe" name="subscribe" type="checkbox" value="subscribe">Add me to your email list
+              </label>
+              <input id="send_to" type="hidden" name="send_to" value="yourEmailHere">
+              <button type="submit" class="submit" disabled>Submit</button>
+			</fieldset>
+          </form>
       </div>
     </section>
-
-
 
     <footer>
 
@@ -85,9 +90,6 @@
       <p></p>
 
     </footer>
-
-
-      <script src="https://unpkg.com/popmotion@8.7.5/dist/popmotion.js"></script>
 
     <script src="portfolio.js"></script>
   </body>
